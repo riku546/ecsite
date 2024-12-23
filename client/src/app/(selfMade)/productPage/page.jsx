@@ -9,7 +9,6 @@ import { useSearchParams } from 'next/navigation'
 import { addToCart } from '@/lib/cartFunc'
 import ProductNumSelect from '@/components/selfMade/ProductNumSelect'
 import Link from 'next/link'
-import axios from '@/lib/axios'
 import { fetchProductInfo } from '@/lib/fetchProductInfo'
 
 const page = () => {
@@ -34,7 +33,7 @@ const page = () => {
     }, [])
 
     return (
-        <div className="container">
+        <div className={styles.container}>
             <Header />
 
             <main className={styles.mainArea}>

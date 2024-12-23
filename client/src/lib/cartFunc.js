@@ -1,11 +1,10 @@
 // このモジュールでは、カートの中身の取得 カートに商品を追加 カートの中身を変更
 // カートから商品を削除 カートに入っている商品の合計金額を計算する関数が用意されている。
 
-import { list } from "postcss"
-
 export const getCartContents = () => {
     // セッションではjson形式の文字列が保存されているので、カートをオブジェクトに変換
     const cartContents = JSON.parse(sessionStorage.getItem('cart'))
+    console.log(cartContents)
     return cartContents
 }
 
@@ -77,8 +76,7 @@ export const calcTotalPriceInCart = (
     return totalPrice
 }
 
-
 // export const  = () => {
 //     const cartContent = getCartContents()
 //     return Object.entries(cartContent).map(([productId , buyQuantity]) =>( { product_id : productId , quantity: buyQuantity}))
-// } 
+// }

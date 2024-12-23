@@ -28,13 +28,16 @@ const page = () => {
         const checkoutStatusText = fetchCheckoutStatus(sessionId)
 
         //決済が失敗した場合は決済ページにリダイレクト
-        if (checkoutStatusText === 'open') redirect('/checkout')
+        if (checkoutStatusText === 'open') {
+            alert('決済に失敗しました')
+            redirect('/checkout')
+        }
     }, [])
 
     return (
         <section id="success">
             <p>success</p>
-            <Link href={"/"}>ホームに戻る</Link>
+            <Link href={'/'}>ホームに戻る</Link>
         </section>
     )
 }

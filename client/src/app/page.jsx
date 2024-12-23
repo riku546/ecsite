@@ -15,7 +15,7 @@ const Home = () => {
     //セッションに保存するのは小計計算を高速化するため
     const extractPrice = productsInfo => {
         const ProductPrices = {}
-        
+
         productsInfo.forEach(productInfo => {
             ProductPrices[productInfo.id] = productInfo.price
         })
@@ -37,10 +37,11 @@ const Home = () => {
 
     useEffect(() => {
         fetchAllProductsInfo()
+
     }, [])
 
     return (
-        <div className="container">
+        <div className={styles.container}>
             <Header />
 
             <main className={styles.mainArea}>

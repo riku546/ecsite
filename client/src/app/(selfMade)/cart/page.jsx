@@ -20,7 +20,7 @@ const page = () => {
     }, [cartContent])
 
     return (
-        <div className="container">
+        <div className={styles.container}>
             <Header />
 
             <main className={styles.mainArea}>
