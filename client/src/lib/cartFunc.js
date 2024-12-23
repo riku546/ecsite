@@ -78,5 +78,5 @@ export const calcTotalPriceInCart = (
 
 // export const  = () => {
 //     const cartContent = getCartContents()
-//     return Object.entries(cartContent).map(([productId , buyQuantity]) =>( { product_id : productId , quantity: buyQuantity}))
+//     return Object.entries(cartContent).map(([productId , buyQuantity]) =>( { productId : productId , quantity: buyQuantity}))
 // }

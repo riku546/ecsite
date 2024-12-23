@@ -17,6 +17,34 @@ const page = () => {
                     quantity: 1,
                     productId: 2,
                 },
+                {
+                    quantity: 1,
+                    productId: 3,
+                },
+                {
+                    quantity: 1,
+                    productId: 4,
+                },
+                {
+                    quantity: 1,
+                    productId: 5,
+                },
+                {
+                    quantity: 1,
+                    productId: 6,
+                },
+                {
+                    quantity: 1,
+                    productId: 7,
+                },
+                {
+                    quantity: 1,
+                    productId: 8,
+                },
+                {
+                    quantity: 1,
+                    productId: 9,
+                },
             ],
         })
         console.log(response.data)
