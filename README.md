@@ -11,7 +11,7 @@
 ### laravelのディレクトリー
 
     composer install
-    php artisan breeze:install 
+    cp .env.example .env
     php artisan key:generate
     php artisan migrate
 
