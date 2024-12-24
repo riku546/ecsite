@@ -4,6 +4,7 @@ import axios from '@/lib/axios'
 import React, { useState, useEffect } from 'react'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
+import { resetCartContents } from '@/lib/cartFunc'
 
 const page = () => {
     const fetchCheckoutStatus = async sessionId => {
@@ -32,6 +33,9 @@ const page = () => {
             alert('決済に失敗しました')
             redirect('/checkout')
         }
+
+        //決済が成功した場合はカートをリセット
+        resetCartContents()
     }, [])
 
     return (

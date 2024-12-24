@@ -9,6 +9,7 @@ import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
 import { calcTotalPriceInCart, getCartContents } from '@/lib/cartFunc'
+import Link from 'next/link'
 
 const page = () => {
     const [cartContent, setCartContent] = useState(getCartContents())
@@ -49,9 +50,9 @@ const page = () => {
                                 小計 <br /> ¥{totalPrice}
                             </p>
                         </CardContent>
-                        <CardActions>
+                        <Link href={'/checkout'}>
                             <Button variant="contained">レジに進む</Button>
-                        </CardActions>
+                        </Link>
                     </Card>
                 </div>
             </main>

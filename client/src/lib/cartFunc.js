@@ -8,6 +8,7 @@ export const getCartContents = () => {
     return cartContents
 }
 
+//実際にセッションにカート内容を保存する
 const setCartContents = cartContents => {
     //オブジェクトをjson形式の文字列に変換(セッションはデータを文字列で保存するため、文字列にする必要がある)
     sessionStorage.setItem('cart', JSON.stringify(cartContents))
@@ -62,6 +63,12 @@ export const deleteProductInCart = productId => {
     setCartContents(cartContents)
 }
 
+export const resetCartContents = () => {
+    sessionStorage.removeItem('cart')
+    //新しい空カートをセッションに保存
+    setCartContents({})
+}
+
 export const calcTotalPriceInCart = (
     cartContent /* cartContentは左のようなオブジェクト {商品のid : カートに入っている商品の個数} */,
 ) => {
@@ -75,8 +82,3 @@ export const calcTotalPriceInCart = (
 
     return totalPrice
 }
-
-// export const  = () => {
-//     const cartContent = getCartContents()
-//     return Object.entries(cartContent).map(([productId , buyQuantity]) =>( { productId : productId , quantity: buyQuantity}))
-// }
