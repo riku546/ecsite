@@ -3,6 +3,7 @@
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +29,8 @@ Route::get('/specificProductInfo/{id}', ProductController::class . '@show');
 Route::post('/payment', PaymentController::class . '@checkout_by_stripe');
 //決済ステータスを返す（決済が成功したかの失敗したか）
 Route::post('/getCheckoutStatus', PaymentController::class . '@get_checkout_status');
+
+//ログインしているかどうかを返す(ログインしてい場合はユーザーIDを返す , していない場合はnullを返す)
+Route::get('checkLogined', function () {
+    return response()->json(["isLogined" => Auth::id()]);
+});
