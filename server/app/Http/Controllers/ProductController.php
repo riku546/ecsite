@@ -13,7 +13,6 @@ class ProductController extends Controller
     public function index()
     {
         try {
-
             $all_product_info = DB::select('select id , name , price  from products');
             return response()->json($all_product_info);
         } catch (\Throwable $th) {

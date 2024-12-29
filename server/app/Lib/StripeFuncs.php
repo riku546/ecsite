@@ -31,6 +31,7 @@ class StripeFuncs
                 'mode' => 'payment',
                 //決済が完了したら購入完了ページにリダイレクト
                 'return_url' => env("FRONTEND_URL") . '/buyComplete?session_id={CHECKOUT_SESSION_ID}',
+                'payment_method_configuration' => 'pmc_1QarcVDWaqHYMLdlIeZDIWYI',
 
             ]);
 
