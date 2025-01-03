@@ -5,7 +5,7 @@ import {
     decreaseProductInCart,
     deleteProductInCart,
     increaseProductInCart,
-    getCartContents,
+    
 } from '@/lib/cartFunc'
 
 const useCart = () => {
