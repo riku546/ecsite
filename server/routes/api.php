@@ -26,9 +26,9 @@ Route::get('/allProductsInfo', ProductController::class . '@index');
 Route::get('/specificProductInfo/{id}', ProductController::class . '@show');
 
 //支払い機能(stripe)のapiルート
-Route::post('/payment', PaymentController::class . '@checkout_by_stripe');
+Route::post('/payment', PaymentController::class . '@checkout_by_stripe')->middleware('auth:sanctum');
 //決済ステータスを返す（決済が成功したかの失敗したか）
-Route::post('/getCheckoutStatus', PaymentController::class . '@get_checkout_status');
+Route::post('/getCheckoutStatus', PaymentController::class . '@get_checkout_status')->middleware('auth:sanctum');
 
 //ログインしているかどうかを返す(ログインしてい場合はユーザーIDを返す , していない場合はnullを返す)
 Route::get('checkLogined', function () {

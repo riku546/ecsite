@@ -8,8 +8,9 @@ import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
-import { calcTotalPriceInCart, getCartContents } from '@/lib/cartFunc'
+import { calcTotalPriceInCart } from '@/lib/cartFunc'
 import Link from 'next/link'
+import { getCartContents } from '@/lib/getCartContents'
 
 const page = () => {
     const [cartContent, setCartContent] = useState(getCartContents())

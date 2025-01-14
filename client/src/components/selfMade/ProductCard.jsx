@@ -6,21 +6,20 @@ import Typography from '@mui/material/Typography'
 import CardActionArea from '@mui/material/CardActionArea'
 import styles from '@/styles/components/ProductCard.module.css'
 
-export default function ProductCard({name ,productId}) {
+export default function ProductCard({ key, name, productId }) {
     return (
-        <Card className={styles.card}>
+        <Card className={styles.card} key={key}>
             <CardActionArea>
                 <CardMedia
                     component="img"
                     image={`/productImg/${productId}.jpg`}
                     alt="green iguana"
-                    height={"200px"}
+                    height={'200px'}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         {name}
                     </Typography>
-
                 </CardContent>
             </CardActionArea>
         </Card>

@@ -23,7 +23,7 @@ const page = () => {
     const checkLogined = async () => {
         const response = await axios.get('/api/checkLogined')
         const isLogined = response.data.isLogined
-        console.log(isLogined)
+        
         if (!isLogined) router.push('/login')
     }
 

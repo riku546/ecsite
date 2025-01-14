@@ -37,7 +37,6 @@ const Home = () => {
 
     useEffect(() => {
         fetchAllProductsInfo()
-
     }, [])
 
     return (
@@ -53,7 +52,6 @@ const Home = () => {
                             query: { productId: productInfo.id },
                         }}>
                         <ProductCard
-                            key={productInfo.id}
                             name={productInfo.name}
                             productId={productInfo.id}
                         />
